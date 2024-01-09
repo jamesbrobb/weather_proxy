@@ -29,7 +29,7 @@ async def get_weather(time, params, location):
     response = requests.get(
         'https://login.meteomatics.com/api/v1/token',
         headers={
-            'Authorization': f'Basic {token.decode('ASCII')}'
+            'Authorization': f'Basic {token.decode("ASCII")}'
         }
     )
     access_token = response.json().get('access_token')
