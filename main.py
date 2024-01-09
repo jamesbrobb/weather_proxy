@@ -10,6 +10,9 @@ class Settings(BaseSettings):
     meteomatics_auth: str
     allowed_origins: list[str]
 
+    class Config:
+        env_file = ".env"
+
 
 settings = Settings()
 
